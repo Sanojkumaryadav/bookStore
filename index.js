@@ -16,6 +16,11 @@ app.use((req, res, next) => {
 app.use(userRouter);
 app.use(bookRouter);
 
+// deploy test
+app.get('/',()=>{
+  res.send("Welcome in Books store")
+})
+
 connectMongoDB().then(() => {
     app.listen(port, () => {
       console.log(`Server is running on port number ${port}`);
