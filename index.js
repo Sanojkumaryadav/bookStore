@@ -17,7 +17,7 @@ app.use(userRouter);
 app.use(bookRouter);
 
 // deploy test
-app.get('/',()=>{
+app.get('/',(req, res)=>{
   res.send("Welcome in Books store")
 })
 
